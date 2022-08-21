@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            table {
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            td, th {
+                border: 1px solid gray;
+                text-align: left;
+                padding: 10px;
+            }
+            tr:nth-child(even) {
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Inventory Table</h1>
+  <style>
+    h1{
+        margin-left: 600px;
+    }
+  </style>
+
+            <table>
+                <tr>
+                    <th>Customer_Id</th>
+                    <th>Inventory_Id</th>
+                    <th>Item_name</th>
+                    <th>Quantity</th>
+                    
+                </tr>
+                <% orderData.forEach(orderdata => { %>
+                    <tr>
+                       <td><%= orderdata.item_name %> </td>
+                       <td><%= orderdata.inventory_id %></td>
+                       <td><%= orderdata.customer_id %> </td>
+                       <td><%= orderdata.quantity %> </td>
+                       
+                    </tr>
+                  
+                   <% }) %>
+            </table>
+            
+        </div>
+    </body>
+</html>
+
+
+
